@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from './components/Navbar'
+import SectionImg from './components/SectionImg'
+import SectionText from './components/SectionText'
+import Pic1 from './img/1.jpeg'
+import Pic2 from './img/2.jpeg'
+import Pic3 from './img/4.jpeg'
+import Pic4 from './img/5.jpeg'
+import "./App.css"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar/>
+      <main>
+        <SectionImg img={Pic1} title="Home" tag="home" />
+        <SectionText title="about" tag="about"/>
+        <SectionImg img={Pic2} title="Services" tag="services" />
+        <SectionImg img={Pic3} title="Contacts" tag="contacts" />
+        <SectionImg img={Pic4} title="Feedback" tag="feedback" />
+      </main>
+    </>
+  )
 }
 
-export default App;
+export default App
